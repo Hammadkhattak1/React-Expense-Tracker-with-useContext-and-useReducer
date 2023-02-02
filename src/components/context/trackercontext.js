@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useState } from "react";
 //here we start writing context for expense tracker !
 export const expenseTrackerContext = createContext({});
 
@@ -10,7 +10,6 @@ const initialData = {
 };
 
 const reducer = (state, action) => {
-  console.log("current state:", state);
   switch (action.type) {
     case "income":
       return {
